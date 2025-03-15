@@ -1,178 +1,53 @@
-# 🚀 Frontend Developer Assignment
+# 🔒 React Authentication Project
 
-## 📌 Tech Stack
-- **React.js** – Component-based UI library.
-- **JavaScript (ES6+)** – Core programming language.
-- **React Router** – Client-side navigation.
-- **Axios** – HTTP client for API communication.
-- **Context API** – Global state management.
-
-## 📝 Task Breakdown
-
-### 1️⃣ Project Setup
-- ✅ Initialize a React project.
-
-### 2️⃣ Authentication System
-- ✅ **Signup & Login Pages**
-  - Form validation using `react-hook-form` or plain React state.
-  - Password validation (min length, special characters).
-  - Store JWT token securely (`localStorage` / `sessionStorage`).
-  - Implement error handling for incorrect logins.
-
-- ✅ **AuthContext API**
-  - Create an authentication context.
-  - Store and manage user authentication state globally.
-
-- ✅ **Protected Routes**
-  - Ensure unauthorized users cannot access the dashboard.
-  - Redirect unauthenticated users to the login page.
-
-### 3️⃣ Backend Integration
-- ✅ **Use Axios for API communication**
-  - Implement API requests (`POST /signup`, `POST /login`, `GET /dashboard`).
-  - Properly handle API responses & errors.
-  - Implement loading states and error messages.
-
-### 4️⃣ Dashboard Page
-- ✅ **Fetch & Display Protected User Data**
-  - Make an authenticated request to fetch user-specific data.
-  - Display data in a user-friendly manner (table, cards, etc.).
-
-- ✅ **Logout Feature**
-  - Clear JWT token and redirect to the login page.
-
-### 5️⃣ State Management
-- ✅ **Use React Context API (or Redux) to:**
-  - Store the authenticated user’s data.
-  - Provide global authentication state.
-
-## ✅ Deliverables
-✔️ Fully working React frontend with:
-- Login & Signup pages (form validation).
-- `AuthContext` to manage user authentication.
-- Protected Routes (users must log in to access the dashboard).
-- Backend Integration via Axios.
-- Proper Routing using React Router.
-
-## 🎯 Bonus Challenge (Optional)
-🔥 **Dark Mode Support** – Implement a theme switcher.  
-🔥 **Animations** – Use Framer Motion or CSS animations for smooth UI transitions.  
+A React-based authentication system with JWT-based login and signup functionality. It uses `react-hook-form` for form handling, `axios` for API requests, and `Context API` for managing authentication state.
 
 ---
 
-# 🛠 Backend Developer Assignment
-
-## 📌 Tech Stack
-- **Node.js** – Backend runtime.
-- **Express.js** – Fast, minimalist backend framework.
-- **MongoDB** – NoSQL database for storing user data.
-- **JWT (JSON Web Token)** – Secure user authentication.
-
-## 📝 Task Breakdown
-
-### 1️⃣ Project Setup
-- ✅ **Initialize an Express.js backend**
-- ✅ **Configure Express Middleware**
-  - `express.json()` for parsing JSON.
-  - `cors` for handling cross-origin requests.
-
-### 2️⃣ User Authentication
-- ✅ **Implement Signup & Login API Endpoints**
-  - `/signup` – Register a new user.
-  - `/login` – Authenticate and return JWT token.
-
-- ✅ **User Schema (MongoDB)**
-  - Fields: `name`, `email`, `password` (hashed), `createdAt`.
-
-- ✅ **JWT Authentication**
-  - Generate a JWT token upon successful login.
-  - Middleware to protect private routes.
-
-### 3️⃣ CRUD API for Sample Resource
-- ✅ **Implement basic CRUD APIs (e.g., for tasks or products)**
-  - `POST /tasks` – Create a new task.
-  - `GET /tasks` – Fetch all tasks.
-  - `PUT /tasks/:id` – Update a task.
-  - `DELETE /tasks/:id` – Delete a task.
-
-## ✅ Deliverables
-✔️ Working Express API with:
-- Authentication System (Signup/Login with JWT).
-- MongoDB Schema (`User`, `Tasks`).
-- CRUD API for Sample Resource.
-- TypeScript Interfaces for API responses.
-
-## 🎯 Bonus Challenge (Optional)
-🔥 **Load Balancing** – Implement a reverse proxy (e.g., Nginx).  
-🔥 **Rate Limiting** – Prevent excessive API requests.  
+## 🚀 Features
+- User authentication (Signup & Login)
+- JWT storage in local storage
+- Protected routes
+- Dark mode support
+- User dashboard displaying personal details
+- Logout functionality
 
 ---
 
-# 🖌 UI/UX Designer Assignment
+## 📸 Screenshots
+### 🔑 Login Page
+![image](https://github.com/user-attachments/assets/61493641-ea2b-4dad-9a8d-90f7e1c57e9f)![image](https://github.com/user-attachments/assets/a552f9e1-2218-4285-b7aa-4236dfcc822a)
 
-## 📌 Tech Stack
-- **Figma** – UI/UX Design Tool.
-- **Color Theory** – Effective color palettes.
-- **Typography** – Readable font selection.
 
-## 📝 Task Breakdown
-- ✅ **Design Login & Dashboard Pages**
-  - Clean, modern, and user-friendly UI.
-  - Proper spacing and responsiveness.
 
-- ✅ **Color Palette Selection**
-  - Choose a visually appealing, accessible color scheme.
+### 📝 Signup Page
+![image](https://github.com/user-attachments/assets/0e7d547e-9e14-4c50-87cc-1dc50c1d6b2d)
 
-- ✅ **Style Guide**
-  - Define buttons, input fields, typography.
 
-## ✅ Deliverables
-✔️ Figma Link with the final design.  
-✔️ Exported Color Codes & Fonts.  
-✔️ PR with `design-assets.md` file (`Figma` link + assets).  
+### 🏠 Dashboard (User Details)
+![image](https://github.com/user-attachments/assets/3b49444f-cdbb-4251-80db-d043fc4585a7)
 
-## 🎯 Bonus Challenge (Optional)
-🔥 **Mobile-first UI Design** – Fully responsive from the start.  
 
 ---
 
-# 🔍 Software Tester Assignment
-
-## 📌 Tech Stack
-- **Jest** – Unit testing for backend.
-- **Cypress** – End-to-end (E2E) testing.
-- **Postman** – API testing.
-
-## 📝 Task Breakdown
-
-### 1️⃣ Backend Testing (Jest)
-- ✅ Write unit tests for authentication & CRUD APIs.
-- ✅ Store test cases in `__tests__` folder.
-
-### 2️⃣ Frontend Testing (Cypress)
-- ✅ Write E2E tests for login/signup flow.
-- ✅ Test protected routes.
-
-### 3️⃣ Test Coverage
-- ✅ Ensure at least **80% coverage**.
-
-## ✅ Deliverables
-✔️ Jest test files for backend (`__tests__` folder).  
-✔️ Cypress test cases for frontend.  
-✔️ PR with `testing-setup` branch.  
-
-## 🎯 Bonus Challenge (Optional)
-🔥 **Automated Regression Testing** – Run tests on PRs automatically.  
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Tailwind CSS, React Router, React Hook Form
+- **Backend:** Node.js, Express.js, JSON Server (for testing API)
+- **State Management:** Context API
+- **Authentication:** JWT-based auth
 
 ---
 
-# 🔄 Submission Process
+## 📦 Installation & Setup
 
-1️⃣ Fork the repository & create a branch (`<name>-<role>`).  
-2️⃣ Complete the assigned task & commit changes.  
-3️⃣ Create a **Pull Request (PR)**.  
-4️⃣ Add proper documentation in the PR description. 
-5️⃣ UI / UX Designers also create a PR with the figma link in a file and the prototype link
+### 🔧 Prerequisites
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/)
+- npm or yarn
 
-⏳ **Deadline: 15/03/2025**  
-🔥 **Bonus Challenge (Optional)** Each team member has extra challenges to go beyond expectations! 🚀
+### 🛠️ Steps to Run
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/repository-name.git
+   cd repository-name
+
